@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js" defer></script>
+    <title>PlasticXterminate</title>
+</head>
+<body>
+    <header class="header-nav">
+        <div class="logo">PlasticXterminate</div>
+        <nav class="navbar">
+            <ul class="nav-ul">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#post">Comments</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="home" id="home">
+        <h1 class="heading-1">Better Nature Better Nation</h1>
+        <h4 class="h4-def"><q>Let us cultivate not only the land beneath our feet but also the compassion within our hearts,<br> for in nurturing nature, we sow the seeds of a better nation,<br> rooted in harmony, empathy, and stewardship of our planet</q></h4>
+
+        <a href="/explore.html" target="_blank"><button class="btn">Explore More</button></a>
+    </div>
+    <div class="dark"></div>
+    <div class="about" id="about">
+
+        <h1 class="about-h1"><q>Facing Earth's Challenges: Confronting Environmental Degradation</q></h1>
+        
+        <div class="card-div">
+        <div class="card">
+            <div class="card-image-1"></div>
+            <div class="card-def">
+                <h3 class="h3-card">Addressing the Crisis of Plastic Pollution</h3>
+                <p class="card-p">Plastic pollution poses a dire threat to our environment, harming marine life, polluting waterways, and degrading ecosystems. Single-use plastics exacerbate this crisis, persisting in our environment for centuries. Urgent action is needed to reduce plastic consumption, promote recycling, and innovate sustainable alternatives. Together, we must tackle this global challenge to preserve the health of our planet for future generations.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image-2"></div>
+            <div class="card-def">
+                <h3 class="h3-card">Confronting the Menace of Water Pollution</h3>
+                <p class="card-p">Water pollution threatens ecosystems, human health, and global sustainability. Contaminants from industrial runoff, agricultural activities, and improper waste disposal jeopardize aquatic life and compromise water quality. Urgent measures, including stricter regulations, community education, and sustainable practices, are imperative to safeguard our water sources. By prioritizing conservation and responsible stewardship, we can mitigate the impacts of water pollution and ensure a healthier future for all.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image-3"></div>
+            <div class="card-def">
+                <h3 class="h3-card">Addressing the Impact of Carbon Emissions</h3>
+                <p class="card-p">Carbon footprints, primarily from burning fossil fuels, contribute to climate change, exacerbating global warming and its dire consequences. Individuals, industries, and governments must unite in reducing emissions through renewable energy adoption, energy efficiency, and carbon offsetting. By embracing sustainable practices and innovative solutions, we can mitigate our carbon footprint, preserve the environment, and pave the way towards a greener, more resilient future.</p>
+            </div>
+        </div>
+        </div>
+
+
+
+    </div>
+    <div class="events" id="events">
+
+            <h1 class="events-h1">Webinars & Events</h1>
+            
+            <div class="images-webinar">
+
+                <a href="https://forms.gle/GRcfXV1jCcJEgfiT6" target="_blank"><img src="./images/web-1.png" alt="webinar" class="web-img"></a>
+                <a href="https://forms.gle/GRcfXV1jCcJEgfiT6" target="_blank"><img src="./images/web-2.png" alt="webinar" class="web-img"></a>
+                <a href="https://forms.gle/GRcfXV1jCcJEgfiT6" target="_blank">><img src="./images/web-3.png" alt="webinar" class="web-img"></a>
+            </div>
+            <a href="https://forms.gle/GRcfXV1jCcJEgfiT6" target="_blank"><button class="web-reg">Register Now</button></a>
+
+
+
+
+    </div>
+    <div class="post" id="post">
+
+        <div id="app">
+            <div id="app">
+                <form @submit.prevent="submitComment" class="form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" v-model="comment.name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" v-model="comment.email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" v-model="comment.message" required></textarea>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+                <div v-if="submitted" class="comment-div">
+                    <div v-for="(message, index) in submittedComments" :key="index" class="comment">
+                        <p class="cmt-name">user: {{ message.name }}</p>
+                        <p class="cmt-email">Email: {{ message.email }}</p>
+                        <p class="cmt-message">Message: {{ message.message }}</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+
+
+
+    </div>
+    <div class="contact" id="contact">
+
+        <div id="contacts">
+            
+            <div class="display3">
+                <div class="showmsg">
+
+                </div>
+                <div class="card3">
+                    
+                        <fieldset>
+                            <input type="text" id="name" placeholder="enter your name">
+
+               
+                            <input type="text" id="Message" placeholder="enter your Email">
+                            <button onclick="alert('thank you we will contact you as soon as possible')">Send</button>
+                        </fieldset>
+
+
+
+
+
+
+
+                   
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            <p class="back2"><a href="#homee">Back to Home</a></p></div>
+
+
+
+    </div>
+    <footer>
+        <p>&copy;Sivam Manoj || s22010608 || ALL Rights Reserved</p>
+    </footer>
+</body>
+</html>
